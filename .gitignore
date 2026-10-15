@@ -1,0 +1,17 @@
+# SPIN model checker artifacts
+pan*
+*.trail
+*.pml.trail
+*.tmp
+
+# Build artifacts
+*.o
+*.out
+*.exe
+
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
