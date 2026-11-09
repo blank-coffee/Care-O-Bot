@@ -1,185 +1,412 @@
 mtype = { idle, navigate, fetch, deliver, wait_human, error,
+          recover, charge,
           kitchen, hallway, livingroom };
 
+/* environment */
 bool human_near = false;
 bool obstacle = false;
 bool object_available = true;
 
-/* Robot + Human locations */
-mtype robot_loc = hallway;    /* init location */
-mtype target_loc = kitchen;   /* where the object is */
-mtype human_loc = livingroom; /* init human location */
+/* robot + human locations */
+mtype robot_loc = hallway;
+mtype target_loc = kitchen;
+mtype human_loc = livingroom;
 
-/* Channels */
+/* channels */
 chan nav_cmd       = [0] of { mtype };
 chan task_cmd      = [0] of { mtype };
+chan task_status   = [0] of { mtype };
 chan human_request = [0] of { int };
 chan status_ch     = [0] of { mtype };
 
-/* Time simulation */
+/* time simulation */
 int time = 0;
 int max_wait = 10;
+int wait_start = 0;
 
+/* battery */
+int battery = 100;
+
+/* errors */
+int error_count = 0;
+
+/* flags */
+bool in_error = false;
+bool recovering = false;
+bool charging = false;
+bool delivered = false;
+
+/* task state */
+bool carrying = false;
+bool has_object = false;
+
+/* mining-friendly propositions */
+bool task_active = false;
+bool navigation_active = false;
+bool waiting_for_human = false;
+bool task_completed = false;
+bool object_carried = false;
+bool low_battery = false;
+bool recovery_active = false;
+
+/* safety monitoring */
+bool safety_stop = false;
 
 
 proctype CareObot() {
+
     mtype state = idle;
+    mtype ack;
 
     do
+
     :: state == idle ->
+
+        delivered = false;
+        task_active = false;
+        task_completed = false;
+
+        low_battery = (battery < 30);
+
         if
-        :: object_available -> { task_cmd ! fetch; state = fetch; }
-        :: else -> state = wait_human;
+        :: battery < 30 ->
+            charging = true;
+            state = charge
+
+        :: else ->
+            if
+            :: object_available ->
+                task_active = true;
+                task_completed = false;
+                navigation_active = true;
+
+                nav_cmd ! navigate;
+                state = navigate
+
+            :: else ->
+                wait_start = time;
+                waiting_for_human = true;
+                state = wait_human
+            fi
         fi
 
-    :: state == fetch ->
-        if
-        :: obstacle -> state = error;
-        :: else -> nav_cmd ! navigate; state = navigate;
-        fi
 
     :: state == navigate ->
+
+        status_ch ? ack;
+
+        navigation_active = false;
+
         if
-        :: human_near -> state = wait_human;
-        :: else -> state = deliver;
+        :: human_near ->
+            wait_start = time;
+            waiting_for_human = true;
+            state = wait_human
+
+        :: else ->
+
+            if
+            :: battery >= 30 ->
+                battery = battery - 30
+            :: else ->
+                battery = 0
+            fi;
+
+            low_battery = (battery < 30);
+
+            task_cmd ! fetch;
+            state = fetch
         fi
+
+
+    :: state == fetch ->
+
+        task_status ? ack;
+
+        if
+        :: ack == fetch ->
+            state = deliver
+
+        :: ack == error ->
+            state = error
+        fi
+
 
     :: state == wait_human ->
+
         if
-        :: human_near -> skip;     /* keep waiting */
-        :: else -> state = deliver;
+        :: human_near ->
+            skip
+
+        :: else ->
+
+            waiting_for_human = false;
+
+            if
+            :: has_object && carrying ->
+                state = deliver
+
+            :: else ->
+                navigation_active = true;
+                nav_cmd ! navigate;
+                state = navigate
+            fi
+
+        :: (time - wait_start) >= max_wait ->
+            waiting_for_human = false;
+            state = error
         fi
+
 
     :: state == deliver ->
+
         if
-        :: object_available ->
+        :: has_object && carrying ->
+
+            delivered = true;
+            task_completed = true;
+
+            carrying = false;
+            has_object = false;
+
+            object_carried = false;
+
             object_available = false;
-            state = idle;
+
+            if
+            :: battery >= 10 ->
+                battery = battery - 10
+            :: else ->
+                battery = 0
+            fi;
+
+            low_battery = (battery < 30);
+
+            state = idle
+
         :: else ->
-            state = error;
+            state = error
         fi
 
+
     :: state == error ->
+
         printf("Error state reached\n");
-        break
+
+        in_error = true;
+        error_count++;
+
+        if
+        :: error_count < 3 ->
+
+            recovering = true;
+            recovery_active = true;
+
+            if
+            :: battery >= 20 ->
+                battery = battery - 20
+            :: else ->
+                battery = 0
+            fi;
+
+            low_battery = (battery < 30);
+
+            state = recover
+
+        :: else ->
+            printf("Too many errors, stopping\n");
+            break
+        fi
+
+
+    :: state == recover ->
+
+        if
+        :: obstacle ->
+            skip
+
+        :: else ->
+
+            object_available = true;
+
+            recovering = false;
+            recovery_active = false;
+            in_error = false;
+
+            carrying = false;
+            has_object = false;
+            object_carried = false;
+
+            state = idle
+        fi
+
+
+    :: state == charge ->
+
+        battery = 100;
+
+        low_battery = false;
+
+        charging = false;
+
+        state = idle
+
     od
 }
 
 
 proctype Human() {
+
     do
-    :: /* walk between rooms */
-       if
-       :: human_loc == livingroom -> human_loc = hallway;
-       :: human_loc == hallway    -> human_loc = kitchen;
-       :: human_loc == kitchen    -> human_loc = hallway;
+
+    :: if
+       :: human_loc == livingroom ->
+            human_loc = hallway
+
+       :: human_loc == hallway ->
+            human_loc = kitchen
+
+       :: human_loc == kitchen ->
+            human_loc = hallway
        fi
 
-    :: /* proximity detection */
-       if
-       :: robot_loc == human_loc -> human_near = true;
-       :: else -> human_near = false;
+    :: if
+       :: robot_loc == human_loc ->
+            human_near = true
+
+       :: else ->
+            human_near = false
        fi
 
-    :: /* occasional request */
-       human_request ! 1
-    od
-}
+    :: if
+       :: !object_available ->
+            object_available = true
 
+       :: else ->
+            skip
+       fi
 
-proctype World() {
-    do
-    :: obstacle = true
-    :: obstacle = false
+    :: human_request ! 1
+
     od
 }
 
 
 proctype Navigator() {
+
     mtype cmd;
 
     do
+
     :: nav_cmd ? cmd ->
+
         if
         :: cmd == navigate ->
-            /* try to move toward target */
+
             if
             :: target_loc != robot_loc &&
-               ( (robot_loc == hallway && (target_loc == kitchen || target_loc == livingroom)) ||
-                 (robot_loc == kitchen  && target_loc == hallway) ||
-                 (robot_loc == livingroom && target_loc == hallway) ) ->
-                robot_loc = target_loc;
+               (
+                 (robot_loc == hallway &&
+                  (target_loc == kitchen ||
+                   target_loc == livingroom))
+                 ||
+                 (robot_loc == kitchen &&
+                  target_loc == hallway)
+                 ||
+                 (robot_loc == livingroom &&
+                  target_loc == hallway)
+               ) ->
+
+                robot_loc = target_loc
+
             :: else ->
-                /* fallback: move toward hallway */
-                if
-                :: ( (robot_loc == hallway && (hallway == kitchen || hallway == livingroom)) ||
-                     (robot_loc == kitchen  && hallway == hallway) ||
-                     (robot_loc == livingroom && hallway == hallway) ) ->
-                    robot_loc = hallway;
-                :: else ->
-                    skip;
-                fi
+
+                skip
             fi;
 
-            /* report arrival */
-            status_ch ! deliver
+            status_ch ! navigate
         fi
+
     od
 }
 
 
-
-
 proctype TaskExec() {
+
     mtype cmd;
 
     do
+
     :: task_cmd ? cmd ->
+
         if
+
         :: cmd == fetch ->
+
             if
-            :: robot_loc == target_loc && object_available ->
-                skip
+            :: robot_loc == target_loc &&
+               object_available ->
+
+                carrying = true;
+                has_object = true;
+
+                object_carried = true;
+
+                task_status ! fetch
+
             :: else ->
+
                 printf("TaskExec: fetch failed\n");
+
+                task_status ! error
             fi
 
+
         :: cmd == deliver ->
+
             if
             :: robot_loc == human_loc ->
-                printf("TaskExec: delivered to human\n");
+                printf("TaskExec: delivered to human\n")
+
             :: else ->
-                printf("TaskExec: delivered at robot_loc\n");
+                printf("TaskExec: delivered at robot_loc\n")
             fi
+
         fi
+
     od
 }
 
 
 proctype SafetyMonitor() {
+
     do
-    :: (human_near && robot_loc == hallway) ->
+
+    :: (human_near && robot_loc == hallway && !safety_stop) ->
+
+        safety_stop = true;
+
         printf("SafetyMonitor: human near in hallway, enforcing stop\n");
+
         obstacle = true
-    od
-}
 
+    :: (!human_near || robot_loc != hallway) && safety_stop ->
 
-proctype Clock() {
-    do
-    :: time++
+        safety_stop = false;
+
+        obstacle = false
     od
 }
 
 
 init {
+
     atomic {
+
         run CareObot();
         run Human();
-        run World();
         run Navigator();
         run TaskExec();
         run SafetyMonitor();
-        run Clock();
     }
 }
