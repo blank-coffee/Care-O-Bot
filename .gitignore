@@ -15,3 +15,20 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated logs
+results/logs/*.json
+
+# Generated statistics
+results/stats/*.json
+
+# Keep verifier cache
+!results/cache/
+!results/cache/verifier_cache.json
