@@ -268,29 +268,28 @@ proctype Human() {
 
        :: human_loc == kitchen ->
             human_loc = hallway
-       fi
+       fi;
 
-    :: if
+       if
        :: robot_loc == human_loc ->
             human_near = true
 
-       :: else ->
+       :: robot_loc != human_loc ->
             human_near = false
-       fi
+       fi;
 
-    :: if
+       if
        :: !object_available ->
             object_available = true
 
-       :: else ->
+       :: object_available ->
             skip
-       fi
+       fi;
 
-    :: human_request ! 1
+       human_request ! 1
 
     od
 }
-
 
 proctype Navigator() {
 
