@@ -22,6 +22,7 @@ Thumbs.db
 # Python cache
 __pycache__/
 *.pyc
+.idea/
 
 # Generated logs
 results/logs/*.json
