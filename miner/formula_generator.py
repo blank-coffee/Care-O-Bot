@@ -62,6 +62,10 @@ class FormulaGenerator:
             self.parser.nested_response_candidates()
         )
 
+        candidates.extend(
+            self.parser.invariance_candidates()
+        )
+
         #
         # Remove duplicates while
         # preserving order

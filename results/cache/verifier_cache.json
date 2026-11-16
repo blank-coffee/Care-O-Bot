@@ -7562,5 +7562,29 @@
     "[] (safety_stop -> <> (low_battery && <> task_active))": {
         "verified": true,
         "message": "Property holds"
+    },
+    "[] (in_error -> <> (object_carried && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (in_error && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (in_error && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (safety_stop && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (object_carried && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (navigation_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
     }
 }
