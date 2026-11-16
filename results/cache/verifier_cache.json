@@ -5806,5 +5806,1761 @@
     "[] (human_near -> <> (task_active && <> navigation_active))": {
         "verified": true,
         "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (charging && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (low_battery && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (recovery_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (low_battery && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (recovery_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_completed && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (in_error && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (navigation_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (task_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (in_error && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (low_battery && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (object_carried && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (navigation_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (navigation_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (human_near && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (in_error && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (waiting_for_human && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (in_error && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (task_completed && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (navigation_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_completed && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (human_near && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (recovery_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (object_carried && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (human_near && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (object_carried && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> [] <> task_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (task_completed && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> [] <> task_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (in_error && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (low_battery && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> [] <> low_battery)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (task_completed && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (safety_stop && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (charging && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (safety_stop && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (navigation_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (in_error && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (safety_stop && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (waiting_for_human && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (charging && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> [] <> navigation_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (safety_stop && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (human_near && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (low_battery && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (task_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (low_battery && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (task_completed && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (task_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (human_near && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (delivered && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (human_near && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (waiting_for_human && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> [] <> delivered)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (charging && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (recovery_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> [] <> object_carried)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> [] <> in_error)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (low_battery && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (object_carried && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> [] <> delivered)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (charging && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (waiting_for_human && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (recovery_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (recovery_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (object_carried && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (object_carried && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (in_error && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (in_error && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (safety_stop && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (object_carried && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (navigation_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> [] <> charging)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (recovery_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (task_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (recovery_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (navigation_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> [] <> safety_stop)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (safety_stop && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (low_battery && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (navigation_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (waiting_for_human && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (human_near && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> [] <> safety_stop)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (in_error && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (safety_stop && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (human_near && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (task_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (recovery_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (recovery_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (low_battery && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (object_carried && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> [] <> low_battery)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (navigation_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (safety_stop && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (object_carried && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (waiting_for_human && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (safety_stop && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (task_completed && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (in_error && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (recovery_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> [] <> safety_stop)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (safety_stop && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (waiting_for_human && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (object_carried && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (waiting_for_human && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (human_near && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (safety_stop && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> [] <> human_near)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (safety_stop && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> [] <> object_carried)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (human_near && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (delivered && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (task_completed && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (navigation_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_completed && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (safety_stop && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (recovery_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (object_carried && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (navigation_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (navigation_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (task_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (recovery_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (human_near && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (human_near && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (low_battery && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (navigation_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_completed && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (recovery_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (object_carried && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (charging && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (recovery_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (in_error && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (task_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (object_carried && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (human_near && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (in_error && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (object_carried && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> [] <> object_carried)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (low_battery && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (in_error && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_completed && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (waiting_for_human && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (task_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (low_battery && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (task_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (recovery_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (safety_stop && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (recovery_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (delivered && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (delivered && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (safety_stop && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (charging && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (object_carried && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> [] <> human_near)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> [] <> object_carried)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (waiting_for_human && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (human_near && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (low_battery && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (low_battery && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (navigation_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (low_battery && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (in_error && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_completed && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (recovery_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (navigation_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (charging && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> [] <> charging)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (human_near && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (charging && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (safety_stop && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (low_battery && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> [] <> recovery_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (waiting_for_human && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (navigation_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (charging && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (in_error && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (task_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (recovery_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (delivered && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (charging && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (delivered && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (in_error && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (object_carried && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (delivered && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (charging && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (task_completed && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (navigation_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (recovery_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> [] <> task_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (waiting_for_human && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (task_completed && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (charging && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (low_battery && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (low_battery && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (safety_stop && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (navigation_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (safety_stop && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (low_battery && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (safety_stop && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (object_carried && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (navigation_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (waiting_for_human && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> [] <> task_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (object_carried && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (in_error && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (in_error && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_completed && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> [] <> recovery_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> [] <> human_near)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (charging && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (human_near && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (delivered && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (human_near && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> [] <> in_error)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (low_battery && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (delivered && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (charging && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (navigation_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (charging && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (low_battery && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (safety_stop && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (recovery_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (delivered && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_completed && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (delivered && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (human_near && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (safety_stop && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (safety_stop && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (recovery_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (recovery_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (charging && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (task_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (waiting_for_human && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (object_carried && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (object_carried && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (recovery_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (recovery_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (task_completed && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> [] <> waiting_for_human)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (recovery_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (safety_stop && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (waiting_for_human && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (human_near && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (waiting_for_human && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (delivered -> <> (in_error && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (low_battery && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (delivered && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (charging && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (object_carried && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (recovery_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (in_error && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (delivered && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (human_near && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (delivered && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (navigation_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> [] <> recovery_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (human_near && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (task_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (low_battery && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (task_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (navigation_active && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (navigation_active && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (object_carried && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (object_carried && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_completed && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (in_error && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (delivered && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (human_near && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (low_battery && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (in_error && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (waiting_for_human && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (charging && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (charging && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (object_carried && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_active && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (delivered && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (in_error && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (human_near && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (waiting_for_human && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (navigation_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (recovery_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (low_battery && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (recovery_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (waiting_for_human && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (delivered && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (recovery_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (charging && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (navigation_active && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> [] <> navigation_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (task_active && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (human_near && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (in_error && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (recovery_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (object_carried && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (in_error && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (waiting_for_human && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (safety_stop && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (task_completed && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> [] <> task_active)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (human_near && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (waiting_for_human && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (in_error && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (charging && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (charging && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> [] <> charging)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (object_carried && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (safety_stop && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (object_carried && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (object_carried && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (task_active && <> waiting_for_human))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (human_near && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> [] <> human_near)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (navigation_active && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (safety_stop && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (task_active && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (in_error && <> human_near))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (in_error && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (recovery_active && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (safety_stop && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (object_carried && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (delivered && <> navigation_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> [] <> delivered)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (waiting_for_human -> <> (human_near && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (human_near && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (navigation_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (human_near -> <> (task_active && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_active -> <> (delivered && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (navigation_active && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (waiting_for_human && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> [] <> charging)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (charging -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (in_error && <> recovery_active))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (delivered && <> task_completed))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (recovery_active -> <> (low_battery && <> object_carried))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (navigation_active -> <> (safety_stop && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (low_battery && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (low_battery -> <> (human_near && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (recovery_active && <> delivered))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (task_completed -> <> (charging && <> in_error))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (object_carried -> <> (in_error && <> low_battery))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> [] <> delivered)": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (human_near && <> safety_stop))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (in_error -> <> (delivered && <> charging))": {
+        "verified": true,
+        "message": "Property holds"
+    },
+    "[] (safety_stop -> <> (low_battery && <> task_active))": {
+        "verified": true,
+        "message": "Property holds"
     }
 }
